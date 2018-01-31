@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+       default-init-method="init"
+       default-destroy-method="destroy">
+
+    <bean id="hello" class="com.hocviencntt.springresot.springresort.Day1.HelloWorld">
+        <property name="message" value="Xin Chao Viet Nam"/>
+    </bean>
+
+
+    <bean id="cus1" class="com.hocviencntt.springresot.springresort.Day2.Customer">
+        <property name="name" value="Viet"/>
+        <property name="age" value="22"/>
+        <property name="sex" value="Male"/>
+        <property name="idCus" value="202222222222"/>
+    </bean>
+
+
+    <bean id="add1" class="com.hocviencntt.springresot.springresort.Day3.Address">
+        <constructor-arg value="105"/>
+        <constructor-arg value="Nguyen Dang"/>
+        <constructor-arg value="Da Nang"/>
+        <constructor-arg value="Viet Nam"/>
+    </bean>
+    <bean id="cus2" class="com.hocviencntt.springresot.springresort.Day3.Customer">
+        <constructor-arg value="Quang Viet"/>
+        <constructor-arg value="22"/>
+        <constructor-arg value="Male"/>
+        <constructor-arg value="11221122"/>
+        <constructor-arg>
+            <ref bean="add1"/>
+        </constructor-arg>
+    </bean>
+
+
+    <bean id="cus3" class="com.hocviencntt.springresot.springresort.Day4.Customer">
+        <property name="name" value="Annnn"/>
+        <property name="idCus" value="12232145"/>
+        <property name="sex" value="Male"/>
+        <property name="age" value="15"/>
+        <property name="code" ref="booking1"/>
+    </bean>
+    <bean id="booking1" class="com.hocviencntt.springresot.springresort.Day4.Booking">
+    </bean>
+
+    <bean id="payment" class="com.hocviencntt.springresot.springresort.Day5.Payment">
+        <constructor-arg>
+            <bean class="com.hocviencntt.springresot.springresort.Day5.Order">
+                <property name="dates" value="10"/>
+                <property name="price" value="10000.0"/>
+                <property name="dateOut" value="1/1/2018"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
+
+
+
+    <bean id="c1" class="com.hocviencntt.springresot.springresort.Day7.Customer">
+        <property name="name" value="Viet"/>
+        <property name="age" value="22"/>
+        <property name="sex" value="Males"/>
+        <property name="idCus" value="0101010101"/>
+    </bean>
+    <bean id="c2" class="com.hocviencntt.springresot.springresort.Day7.Customer">
+        <property name="name" value="Viet1"/>
+        <property name="age" value="22"/>
+        <property name="sex" value="Males"/>
+        <property name="idCus" value="0101010101"/>
+    </bean>
+    <bean id="cus7" class="com.hocviencntt.springresot.springresort.Day7.Customer">
+        <property name="customers">
+            <list>
+                <ref bean="c1"/>
+                <ref bean="c2"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="cusDay9" class="com.hocviencntt.springresot.springresort.Day9.Customer" scope="prototype">
+        <property name="name" value="Viet"/>
+        <property name="age" value="22"/>
+        <property name="sex" value="male"/>
+        <property name="idCus" value="2121212121"/>
+    </bean>
+
+
+    <bean id="payment1" class="com.hocviencntt.springresot.springresort.Day10.Master"/>
+    <bean id="payment2" class="com.hocviencntt.springresot.springresort.Day10.Visa"/>
+    <bean id="servicePaymentD10" class="com.hocviencntt.springresot.springresort.Day10.ServicePayment" autowire="byName"/>
+
+
+    <bean id="p1" class="com.hocviencntt.springresot.springresort.Day11.Master"/>
+    <bean id="p2" class="com.hocviencntt.springresot.springresort.Day11.Visa"/>
+    <bean id="servicePaymentD11" class="com.hocviencntt.springresot.springresort.Day11.ServicePayment" autowire="byType"/>
+
+
+    <bean id="pay1" class="com.hocviencntt.springresot.springresort.Day12.Master"/>
+    <bean id="pay2" class="com.hocviencntt.springresot.springresort.Day12.Visa"/>
+    <bean id="servicePaymentD12" class="com.hocviencntt.springresot.springresort.Day12.ServicePayment" autowire="constructor"/>
+
+    <bean id="payment_1" class="com.hocviencntt.springresot.springresort.Day13.Master"/>
+    <bean id="payment_2" class="com.hocviencntt.springresot.springresort.Day13.Visa"/>
+    <bean id="servicePaymentD13" class="com.hocviencntt.springresot.springresort.Day13.ServicePayment" autowire="autodetect"/>
+</beans>
