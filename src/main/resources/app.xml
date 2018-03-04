@@ -102,7 +102,4 @@
     <bean id="pay2" class="com.hocviencntt.springresot.springresort.Day12.Visa"/>
     <bean id="servicePaymentD12" class="com.hocviencntt.springresot.springresort.Day12.ServicePayment" autowire="constructor"/>
 
-    <bean id="payment_1" class="com.hocviencntt.springresot.springresort.Day13.Master"/>
-    <bean id="payment_2" class="com.hocviencntt.springresot.springresort.Day13.Visa"/>
-    <bean id="servicePaymentD13" class="com.hocviencntt.springresot.springresort.Day13.ServicePayment" autowire="autodetect"/>
 </beans>

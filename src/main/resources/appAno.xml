@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+    <context:annotation-config />
+    <!-- Inject by setter -->
+    <bean id="cus" class="com.hocviencntt.springresot.springresort.Day13.Customer">
+        <property name="name" value="Viet"/>
+        <property name="sex" value="Nam"/>
+        <property name="age" value="21"/>
+        <property name="idCus" value="123456"/>
+        <property name="pay" value="1"/>
+    </bean>
+    <bean id="visa" class="com.hocviencntt.springresot.springresort.Day13.Visa"/>
+    <bean id="master" class="com.hocviencntt.springresot.springresort.Day13.Master"/>
+
+    <!--````````````````````````````````````-->
+    <bean id="cus1" class="com.hocviencntt.springresot.springresort.Day14.Customer">
+        <property name="name" value="Viet"/>
+        <property name="sex" value="Nam"/>
+        <property name="age" value="21"/>
+        <property name="idCus" value="123456"/>
+    </bean>
+
+    <bean id="visaD14" class="com.hocviencntt.springresot.springresort.Day14.Visa"/>
+
+</beans>

@@ -1,6 +1,6 @@
 package com.hocviencntt.springresot.springresort.Resort;
 
-import com.hocviencntt.springresot.springresort.Day13.MainDay13;
+import com.hocviencntt.springresot.springresort.Day15.MainDay15;
 
 public class Main {
     public static void main(String[] args) {
@@ -52,10 +52,15 @@ public class Main {
         MainDay12 mainDay12 = new MainDay12();
         mainDay12.run();*/
 
-
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~Day12~~~~~~~~~~~~~~~~~~~~~~~");
+        /*System.out.println("~~~~~~~~~~~~~~~~~~~~~~~Day13~~~~~~~~~~~~~~~~~~~~~~~");
         MainDay13 mainDay13 = new MainDay13();
-        mainDay13.run();
+        mainDay13.run();*/
 
+        /*System.out.println("~~~~~~~~~~~~~~~~~~~~~~~Day14~~~~~~~~~~~~~~~~~~~~~~~");
+        MainDay14 mainDay14 = new MainDay14();
+        mainDay14.run();*/
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~Day15~~~~~~~~~~~~~~~~~~~~~~~");
+        MainDay15 mainDay15 = new MainDay15();
+        mainDay15.run();
     }
 }

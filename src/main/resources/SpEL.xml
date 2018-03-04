@@ -12,8 +12,10 @@
         <property name="name" value="Viet"/>
         <property name="address" value="Da Nang"/>
         <property name="money" value="#{spel.money}"/>
+
         <property name="vip" value="#{spel.money ge 1000}"/>
+
         <property name="discount" value="#{cusVip.vip eq true || spel.money ge 1000}"/>
-        <property name="validPhoneNumber" value="#{01212122 matches '\d+'}"/>
+        <property name="validPhoneNumber" value="#{'01212122' matches '\d+'}"/>
     </bean>
 </beans>
